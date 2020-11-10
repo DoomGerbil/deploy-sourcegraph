@@ -47,3 +47,122 @@ resources:
 - base/codeintel-db/codeintel-db.ConfigMap.yaml
 - base/codeintel-db/codeintel-db.Deployment.yaml
 - base/codeintel-db/codeintel-db.Service.yaml
+images:
+  - name: cadvisor
+    newName: index.docker.io/sourcegraph/cadvisor
+    newTag: insiders
+    digest: 48783ad169ecda50907c673521e5d1f9457ba2a87ca257bb5907dfc6cdc7763a
+  - name: alpine
+    newName: sourcegraph/alpine
+    newTag: "3.12"
+    digest: 133a0a767b836cf86a011101995641cf1b5cbefb3dd212d78d7be145adde636d
+  - name: codeintel-db
+    newName: index.docker.io/sourcegraph/codeintel-db
+    digest: 63090799b34b3115a387d96fe2227a37999d432b774a1d9b7966b8c5d81b56ad
+  - name: postgres_exporter
+    newName: wrouesnel/postgres_exporter
+    newTag: v0.7.0
+    digest: 785c919627c06f540d515aac88b7966f352403f73e931e70dc2cbf783146a98b
+  - name: frontend
+    newName: index.docker.io/sourcegraph/frontend
+    newTag: insiders
+    digest: 5ae008a0a000cfd399087694804caa380a1060cdba0eec5d576ff75fdbff4e75
+  - name: jaeger-agent
+    newName: index.docker.io/sourcegraph/jaeger-agent
+    newTag: insiders
+    digest: b881fd339227298280a89808447dc8a9bc05fa9650c0a32168eef1d666d4922e
+  - name: github-proxy
+    newName: index.docker.io/sourcegraph/github-proxy
+    newTag: insiders
+    digest: af19c210f8aa84f384af88c3afe3c116f39ae8c1d03476ccd5d133ff21787f0b
+  - name: grafana
+    newName: index.docker.io/sourcegraph/grafana
+    newTag: insiders
+    digest: f7b34d6e436ff7dfede72ebcf5b6cb50502406f9fd8af7987acf3622a0a124ee
+  - name: gitserver
+    newName: index.docker.io/sourcegraph/gitserver
+    newTag: insiders
+    digest: c431f66e0a4cee91e591ad218c194e7369e5666fad74878fda95c545901948e7
+  - name: indexed-searcher
+    newName: index.docker.io/sourcegraph/indexed-searcher
+    newTag: insiders
+    digest: c9d0a3488f3a6030153004c3f0e306c540290c3a5ebd33914be1931f9428485b
+  - name: search-indexer
+    newName: index.docker.io/sourcegraph/search-indexer
+    newTag: insiders
+    digest: eaaba3c9956d50a148c032cfeca57531d143359b3648f5ffbea8d3feb5cb5e81
+  - name: jaeger-all-in-one
+    newName: index.docker.io/sourcegraph/jaeger-all-in-one
+    newTag: insiders
+    digest: 9254d6387765a0a2ef1953afa07d01f5374aaa2430ac77cf3a4e936daf7eccb6
+  - name: minio
+    newName: index.docker.io/sourcegraph/minio
+    digest: 3d7a0147396ea799284ba707765d477797518425682c9aa65faa5883a63fac4f
+  - name: postgres-11.4
+    newName: index.docker.io/sourcegraph/postgres-11.4
+    newTag: insiders
+    digest: a55fea6638d478c2368c227d06a1a2b7a2056b693967628427d41c92d9209e97
+  - name: precise-code-intel-worker
+    newName: index.docker.io/sourcegraph/precise-code-intel-worker
+    newTag: insiders
+    digest: fe38e8a894bb2df89aa5962d8af703a9b8c4ce398481e0e930bb484b012e63ea
+  - name: prometheus
+    newName: index.docker.io/sourcegraph/prometheus
+    newTag: insiders
+    digest: 284bb48b896b918d2d32944f168ff2a987977cc78fea6ac3f934394ec04c665e
+  - name: query-runner
+    newName: index.docker.io/sourcegraph/query-runner
+    newTag: insiders
+    digest: 346fa3ba129db03786683373b9f6a28d2dc034a2d3dcab23366dd25f0bbfe6dd
+  - name: redis-cache
+    newName: index.docker.io/sourcegraph/redis-cache
+    newTag: insiders
+    digest: 7820219195ab3e8fdae5875cd690fed1b2a01fd1063bd94210c0e9d529c38e56
+  - name: redis_exporter
+    newName: index.docker.io/sourcegraph/redis_exporter
+    newTag: 18-02-07_bb60087_v0.15.0
+    digest: 282d59b2692cca68da128a4e28d368ced3d17945cd1d273d3ee7ba719d77b753
+  - name: redis-store
+    newName: index.docker.io/sourcegraph/redis-store
+    newTag: insiders
+    digest: e8467a8279832207559bdfbc4a89b68916ecd5b44ab5cf7620c995461c005168
+  - name: repo-updater
+    newName: index.docker.io/sourcegraph/repo-updater
+    newTag: insiders
+    digest: 7d7e37d60298e12a23dc85f19a9140de4fb846effe1fabae764afd2c93fd8394
+  - name: searcher
+    newName: index.docker.io/sourcegraph/searcher
+    newTag: insiders
+    digest: f69b3a03c6b9c500cc8219db8ea8e0d99e1eac166bbd2ecb40b50fe59fc062dc
+  - name: symbols
+    newName: index.docker.io/sourcegraph/symbols
+    newTag: insiders
+    digest: c35697f702889dc01c715de8db8a436fb2f72c825c6fe8932b13edc2f25a88dd
+  - name: syntax-highlighter
+    newName: index.docker.io/sourcegraph/syntax-highlighter
+    newTag: insiders
+    digest: e50ed88f971f7b08698abbc87a10fe18f2f8bbb6472766a15677621c59ca5185
+  - name: nginx-ingress-controller
+    newName: quay.io/kubernetes-ingress-controller/nginx-ingress-controller
+    newTag: "0.29.0"
+    digest: 603a8f4d4c88e83c58d07d20de03a15ed1892bf261d699b3f85ffd892b01bba0
+  - name: lang-go
+    newName: index.docker.io/sourcegraph/lang-go
+    newTag: insiders
+    digest: 556d3163389eaa244c996c5c22ea8f5f52c457cd0b94458b38ab8cda27d590b5
+  - name: lang-typescript
+    newName: index.docker.io/sourcegraph/lang-typescript
+    newTag: insiders
+    digest: 9c77830895e9db9083a5dced0c1b5ac67bdfda15d2b6c73d16048cbcf850c2fc
+  - name: npm-proxy
+    newName: index.docker.io/sourcegraph/npm-proxy
+    newTag: 9d593e267b6f5e86caeb29da37f140c5f5f4c8b2
+    digest: 00e3241065185b04a1a04d0d0cd5b811c438aadd0647bfe6933e79b73bffd0e0
+  - name: nginx
+    newName: nginx
+    newTag: "1.17.2"
+    digest: eb3320e2f9ca409b7c0aa71aea3cf7ce7d018f03a372564dbdb023646958770b
+  - name: pod-tmp-gc
+    newName: index.docker.io/sourcegraph/pod-tmp-gc
+    newTag: latest
+    digest: 5ebd7c84d4571d0efb2b04cadb0be702ae90c7edce5463a0fa2e3215f7b4b1e3

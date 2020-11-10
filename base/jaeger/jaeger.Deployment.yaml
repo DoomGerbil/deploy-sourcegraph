@@ -29,7 +29,7 @@ spec:
         prometheus.io/port: "16686"
     spec:
         containers:
-          - image: index.docker.io/sourcegraph/jaeger-all-in-one:insiders@sha256:9254d6387765a0a2ef1953afa07d01f5374aaa2430ac77cf3a4e936daf7eccb6
+          - image: jaeger-all-in-one
             name: jaeger
             args: ["--memory.max-traces=20000"]
             ports:
